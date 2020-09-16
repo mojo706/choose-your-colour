@@ -39,7 +39,7 @@ function App() {
               {error}</div>}
           </div>
           <div className="form__item">
-            <button className="form__btn" onClick={setStyle}>
+            <button className="form__btn" type="button" onClick={setStyle}>
               Set Colour
             </button>
           </div>
