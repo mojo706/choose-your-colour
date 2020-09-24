@@ -3,8 +3,12 @@ import "./App.css";
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState("black");
-  const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState("");
+
+  let inputValue
+  const onChange = (e) => {
+    inputValue = (e.target.value)
+  };
 
   const setStyle = () => {
     if(inputValue) {
@@ -13,9 +17,7 @@ function App() {
       setError("Please enter a colour")
     }
   };
-  const onChange = (e) => {
-    setInputValue(e.target.value)
-  };
+  
   return (
     <div className="app">
       <div className="form__container">
